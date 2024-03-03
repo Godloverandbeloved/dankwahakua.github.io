@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    padding:0;
+    margin:0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+
+}
+
+ div h1{
+  text-align: center;
+ }
+ /* 
+nav ul li {
+    list-style: none;
+    display: inline;
+}  
+nav ul{
+    padding: 3px 0;
+    margin: 10 px 0px 10px 0px;
+    border-bottom:  solid ; 
+    background-color: antiquewhite;
+    color: black;
+}
+  
+nav ul li a{
+    padding: 3px 0.5em;
+    margin-left: 30px;
+    border: 0px solid #669;
+    border-bottom: none;
+    background: transparent;
+    text-decoration: none;
+    color: black;
+}
+  
+nav ul li a#encours{
+    background: white;
+    border-bottom: 1px solid white;
+} */
+
+
+.sticky {
+	z-index: 5;
+	position: sticky;
+	top: 0;   
+}
+
+/* .sticky {
+	z-index: 5;
+	position: sticky;
+	top: 0;   
+} */
+#topnav{
+    background-color: black; 
+    overflow: hidden;
+}
+#topnav a{
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;   
+}
+#topnav a:hover{
+    background-color: antiquewhite;
+    color: #a00835;
+}
+#topnav a:active{
+    background-color: salmon ;
+    color: antiquewhite;
+}
+#topnav a.split{
+    float: right;
+    background-color: #a00835;
+    color: white;
+}
+#topnav a.split:hover{
+    color: #a00835;
+    background-color: antiquewhite;
+}
+
+
+span{
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #ff0157;
+}
+
+div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+} 
+div.gallery:hover {
+    border: 1px solid #777;
+} 
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
