@@ -1,0 +1,53 @@
+.piano {
+    display: flex;
+    /* Variables de dimension des touches blanches, puis noires */
+    --key-width: 3em;
+    --key-height: 16em;
+    --black-key-width: calc(var(--key-width) * 0.6);
+    --black-key-height: calc(var(--key-height) * 0.6);
+    padding-top: calc(var(--key-width) * 0.5);
+    padding-left: calc(var(--key-width) * 0.5);
+    padding-right: calc(var(--key-width) * 0.5);
+    background-color: black;
+    margin: auto;
+    width: fit-content;
+}
+
+.piano .key {
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+.piano .key[class *="#"] {
+    height: var(--black-key-height);
+    width: var(--black-key-width);
+    /* Déplacement relatif à gauche pour placer la touche noire entre les blanches */
+    margin-left: calc(var(--black-key-width) * -0.5);
+    z-index: 2;
+    background: linear-gradient(to left bottom,#555, #111);
+}
+
+.piano .key:not([class *="#"]) {
+    background-color: floralwhite;
+    width: var(--key-width);
+    height: var(--key-height);
+    z-index: 1;
+}
+
+/* White keys are those that are not black. They have an old ivory color, and a z-index 1 to place them under the black keys. */
+.key[class *="#"]+.key {
+    margin-left: calc(var(--black-key-width) * -0.5)
+}
+/* All white notes that follow a black note have a blank that is left for the location of that black note.  */
+
+.key[class *="#"]+.key {
+    margin-left: calc(var(--black-key-width) * -0.5)
+}
+
+/* The animation of the keys when clicked is achieved by reducing the key very slightly and subtly adding shadows to the inner edges of the key. The latter effect is not very noticeable on black keys. */
+.piano .key:active {
+    transform: scale(0.99);
+    box-shadow:2px 0 3px rgba(0,0,0,0.1) inset,-5px 5px 20px rgba(0,0,0,0.2) inset,0 0 3px rgba(0,0,0,0.2);
+}
+
+
